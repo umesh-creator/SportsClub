@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Slot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/user.css" type="text/css">
+    
+</head>
+<body>
+    <a class="nav-link" href="/logout" style="float: right;padding: 10px 10px;background-color:chartreuse;margin-right: 100px;border-radius: 10px;text-decoration: none;" >Log Out</a>
+        <header>
+                <h1>Book Your Slot </h1>
+
+    
+            </header>
+        <fieldset>
+        <form action="use" method="POST">
+        <!--<input list="sports" name="sports" placeholder="Sports" required>-->
+        <select name ="sports">
+            <% if (data) { %>
+              <% data.forEach(function(user){ %>
+                  <option value="<%= user.sname %>"><%= user.sname %></option>
+              <% }) %>
+              <% } %>
+
+        </select>
+
+         <br>
+         <br>
+         
+       
+         <input type="date" name="date" placeholder="Date :" required><br><br>
+         <input type="time" placeholder="Time :" name="start_time"  required> <p>to</p>
+         <input type="time" placeholder="Time :" name="end_time" required><br><br>
+         <input type="text" placeholder="Enter Phone Number" name="phone" required maxlength="10" minlength="10"> <br><br>
+         <button>Continue</button>
+         <button type="reset">Reset</button>
+            <br><br>
+          </form>
+          
+        </fieldset>
+</body>
+</html>

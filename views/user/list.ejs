@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title><%= title %></title>
+</head>
+<body style="background-image: url('/images/admin.jpg');">
+	<a class="nav-link" href="/admin/add" style="float: right;padding: 10px 10px;background-color:#4CAF50;;margin-right: 100px;border-radius: 10px; text-decoration: none;">Log Out</a>  
+        <a class="nav-link" href="/admin/home"  style="float: right;padding: 10px 10px;background-color:#4CAF50;;margin-right:10px;border-radius: 10px;text-decoration: none;">Home</a>
+		<h1><%= title %></h1>
+	<table width='80%' border=0>
+
+		<tr style='text-align:left; background-color: aqua;'>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Game</th>
+			<th>Phone Number</th>
+			<th>Date</th>
+			<th>From_Time</th>
+			<th>End_Time</th>
+	
+		</tr>
+		
+		<!--
+			Using FOREACH LOOP for the users array
+			
+			myArray.forEach(function(el, index) {
+				// el - current element, i - index
+			});
+		-->
+		<% if (data) { %>
+		<% data.forEach(function(user){ %>
+			<tr>
+				<td><%= user.UserName %></td>
+				<td><%= user.MemEmail %></td>
+				<td><%= user.UserGame %></td>
+				<td><%= user.UserPhone %></td>
+				<td><%= user.UserDate %></td>
+				<td><%= user.UserfromTime %></td>
+				<td><%= user.UserendTime %></td>
+				
+			</tr>
+		<% }) %>
+		<% } %>
+	
+	</table>
+</body>
+</html>
+

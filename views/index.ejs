@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sports Club</title>
+<!--Custom Theme files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>-->
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	
+<link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+</head>
+<body>
+		<ul class="nav" style="margin-left: 40%;margin-right: 40%;margin-top: 20px;">
+				
+				<li class="nav-item">
+				  <a class="nav-link" href="/">login</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/admin/add">Admin</a>
+				</li>
+
+				<li class="nav-item">
+						<a class="nav-link active" href="/guest/add">Guest</a>
+					  </li>
+				
+			  </ul>
+	<h1>Alpha Sports Club </h1>
+	<!-- main -->
+	<div class="main">
+		<div class="w3">
+			<div class="signin-form profile">
+				<h3>Login</h3>
+				
+				<div class="login-form">
+					<form action="/" method="post">
+						<input type="text" name="logemail" placeholder="E-mail" required="">
+						<input type="password" name="logpassword" placeholder="Password" required="">
+						<div class="tp">
+							<input type="submit" value="LOGIN NOW">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="agile">
+			<div class="signin-form profile">
+				<h3>Register</h3>
+				
+				<div class="login-form">
+					<form id="login" action="/" method="post" onsubmit="event.preventDefault(); validateMyForm();">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="text" name="username" placeholder="Username" >
+						<input type="password" name="password" placeholder="Password" id="password" required="" >
+						<input type="password" name="passwordConf" placeholder="Confirm Password" id="password_conf" required="">
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--//signin-form-->	
+	</div>	
+
+	<script type="text/javascript">
+		var passWordField = document.getElementById('password')
+		var passWordConfirmField = document.getElementById('password_conf')
+		var form = document.getElementById('login')
+		function validateMyForm(){
+			if(passWordField.value != passWordConfirmField.value){ 
+		    	alert("Passwords do not match. Please try again.");
+		  	} else {
+		  		form.submit()
+		  	}
+		}
+	</script>	
+
+</body>
+</html>

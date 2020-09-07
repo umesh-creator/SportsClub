@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guest</title>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <link rel="stylesheet" type="text/css" href="/css/guest.css" media="all"/>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="/">Login</a></li>
+          <li><a href="/admin/add">Admin</a></li>
+          <li><a href="/guest/add">Guest</a></li>
+        </ul>
+      </nav>
+        <header>
+                <h1>Book Your Slot </h1>
+            </header>
+        <fieldset>
+        <form action='/guest/add' method="POST">
+          <select name ="sports">
+              <% if (data) { %>
+                <% data.forEach(function(user){ %>
+                    <option value="<%= user.sname %>"><%= user.sname %></option>
+                <% }) %>
+                <% } %>
+  
+          </select>
+         <br>
+         <br>
+         <input type="text" placeholder="Your Name" name="username" autocomplete="on" required><br><br>
+       
+         <input type="date" name="date" placeholder="Date :" required><br><br>
+         <input type="time" placeholder="Time :" name="start_time"  required> <p>to</p>
+         <input type="time" placeholder="Time :" name="end_time" required><br><br>
+         <input type="text" placeholder="Enter Phone Number" name="phone" required maxlength="10" minlength="10"> <br><br>
+         <button>Continue</button>
+         <button type="reset">Reset</button>
+            <br><br>
+          </form>
+        </fieldset>
+</body>
+</html>
